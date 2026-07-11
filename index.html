@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Image Phrase AI</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="app">
+      <header>
+        <h1>Image Phrase AI</h1>
+        <p>Sube una imagen, escribe una frase y descárgala lista para compartir.</p>
+      </header>
+
+      <section class="card controls">
+        <label class="file-label">
+          <span>Elegir imagen</span>
+          <input id="imageInput" type="file" accept="image/*" />
+        </label>
+
+        <label>
+          <span>Frase</span>
+          <textarea id="phraseInput" rows="3" placeholder="Ej: Nunca pares de soñar"></textarea>
+        </label>
+
+        <div class="grid">
+          <label>
+            <span>Color</span>
+            <input id="textColor" type="color" value="#ffffff" />
+          </label>
+          <label>
+            <span>Tamaño</span>
+            <input id="textSize" type="range" min="18" max="96" value="42" />
+          </label>
+        </div>
+
+        <button id="renderBtn">Generar imagen</button>
+        <button id="downloadBtn" class="secondary" disabled>Descargar PNG</button>
+      </section>
+
+      <section class="card preview-wrap">
+        <div class="canvas-holder">
+          <canvas id="canvas" width="1080" height="1350"></canvas>
+        </div>
+      </section>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
